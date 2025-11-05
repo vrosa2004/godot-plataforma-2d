@@ -91,5 +91,6 @@ autoplay = "idle"
 [node name="animator" type="AnimationPlayer" parent="."]
 
 [node name="collison" type="CollisionShape2D" parent="."]
+visibility_layer = 2
 position = Vector2(0, 8.5)
 shape = SubResource("RectangleShape2D_esgq3")
