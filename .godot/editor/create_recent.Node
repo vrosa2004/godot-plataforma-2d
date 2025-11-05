@@ -1,4 +1,7 @@
+Node2D
 CollisionShape2D
+AnimatedSprite2D
+Area2D
 AnimatableBody2D
 Sprite2D
 ParallaxLayer
@@ -8,5 +11,4 @@ Camera2D
 TileMapLayer
 TileMap
 StaticBody2D
-AnimatedSprite2D
 CharacterBody2D

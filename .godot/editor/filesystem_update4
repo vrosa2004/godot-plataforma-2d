@@ -4,3 +4,5 @@ res://moving_plataform.gd
 res://levels/world_1.tscn
 res://actors/player.tscn
 res://scripts/player.gd
+res://prefabs/coin.tscn
+res://scripts/coin.gd

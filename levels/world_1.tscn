@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=4 uid="uid://r7ppf5pbt44n"]
+[gd_scene load_steps=18 format=4 uid="uid://r7ppf5pbt44n"]
 
 [ext_resource type="Texture2D" uid="uid://cr6010ulia40y" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_3hl4r"]
+[ext_resource type="PackedScene" uid="uid://dbkgm8anhsp4w" path="res://prefabs/coin.tscn" id="1_4aspj"]
 [ext_resource type="Texture2D" uid="uid://dgfpgvcwyyqay" path="res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png" id="2_7ab5j"]
 [ext_resource type="PackedScene" uid="uid://cke1scbsjwe2q" path="res://actors/player.tscn" id="3_viyde"]
 [ext_resource type="Texture2D" uid="uid://chia1koiwrans" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png" id="4_bx18w"]
@@ -53,6 +54,7 @@ texture = ExtResource("1_3hl4r")
 5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 11:1/0 = 0
 11:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+11:1/0/physics_layer_0/polygon_0/one_way = true
 3:2/0 = 0
 4:2/0 = 0
 5:2/0 = 0
@@ -72,18 +74,20 @@ texture = ExtResource("1_3hl4r")
 6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:3/0 = 0
 7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-9:3/0 = 0
-9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 10:3/0 = 0
 10:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+10:3/0/physics_layer_0/polygon_0/one_way = true
 11:3/0 = 0
 11:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 12:3/0 = 0
 12:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+12:3/0/physics_layer_0/polygon_0/one_way = true
 13:3/0 = 0
 13:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+13:3/0/physics_layer_0/polygon_0/one_way = true
 15:3/0 = 0
 15:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+15:3/0/physics_layer_0/polygon_0/one_way = true
 2:4/0 = 0
 2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:4/0 = 0
@@ -115,6 +119,9 @@ texture = ExtResource("1_3hl4r")
 4:8/0 = 0
 1:4/0 = 0
 1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+9:3/0 = 0
+9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, 8, 8, -8, -8, -8)
+9:3/0/physics_layer_0/polygon_0/one_way = true
 
 [sub_resource type="TileSet" id="TileSet_n5ceu"]
 physics_layer_0/collision_layer = 2
@@ -130,6 +137,26 @@ shader_parameter/move_speed = 0.03
 
 [node name="World-1" type="Node2D"]
 
+[node name="coins" type="Node2D" parent="."]
+
+[node name="coin" parent="coins" instance=ExtResource("1_4aspj")]
+position = Vector2(471, 86)
+
+[node name="coin2" parent="coins" instance=ExtResource("1_4aspj")]
+position = Vector2(374, 38)
+
+[node name="coin3" parent="coins" instance=ExtResource("1_4aspj")]
+position = Vector2(472, -10)
+
+[node name="coin4" parent="coins" instance=ExtResource("1_4aspj")]
+position = Vector2(670, 150)
+
+[node name="coin5" parent="coins" instance=ExtResource("1_4aspj")]
+position = Vector2(751, -43)
+
+[node name="coin6" parent="coins" instance=ExtResource("1_4aspj")]
+position = Vector2(610, 2)
+
 [node name="trees" type="TileMapLayer" parent="."]
 position = Vector2(54, 47)
 tile_map_data = PackedByteArray("AAADAAcAAAAJAAEAAAAUAAQAAAAFAAEAAAAaAAcAAAAFAAEAAAAGAAcAAAAFAAEAAAAOAAcAAAABAAEAAAAfAAcAAAAJAAEAAAA=")
@@ -144,6 +171,7 @@ tile_set = SubResource("TileSet_n5ceu")
 position = Vector2(209, 123)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+visible = false
 
 [node name="05" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(53, -119)
