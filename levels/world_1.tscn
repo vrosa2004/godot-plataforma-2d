@@ -171,7 +171,6 @@ tile_set = SubResource("TileSet_n5ceu")
 position = Vector2(209, 123)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-visible = false
 
 [node name="05" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(53, -119)
