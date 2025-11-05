@@ -6,3 +6,5 @@ res://actors/player.tscn
 res://scripts/player.gd
 res://prefabs/coin.tscn
 res://scripts/coin.gd
+res://enemy.tscn
+res://scripts/enemy.gd
