@@ -1,0 +1,11 @@
+Sprite2D
+ParallaxLayer
+ParallaxBackground
+AnimationPlayer
+Camera2D
+TileMapLayer
+TileMap
+CollisionShape2D
+StaticBody2D
+AnimatedSprite2D
+CharacterBody2D

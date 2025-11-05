@@ -1,0 +1,4 @@
+res://levels/world_1.tscn
+res://shaders/movement_clouds.gdshader
+res://actors/player.tscn
+res://scripts/player.gd
