@@ -20,6 +20,10 @@ window/size/viewport_width=640
 window/size/viewport_height=320
 window/canvas_textures/default_texture_filter=1
 
+[global_group]
+
+enemies=""
+
 [input]
 
 move_left={
@@ -44,6 +48,8 @@ jump={
 2d_physics/layer_2="world"
 2d_physics/layer_3="enemies"
 2d_physics/layer_4="items"
+2d_physics/layer_5="hitbox"
+2d_physics/layer_6="hurtbox"
 
 [rendering]
 

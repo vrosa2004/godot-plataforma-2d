@@ -1,8 +1,9 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1762368270
+::res://::1762449905
+enemy.tscn::PackedScene::4646322755394046025::1762449335::0::1::::<><><>0<>0<><>::uid://bkw6bffdjrttd::::res://assets/Sprite Pack 2/4 - Robo Pumpkin/Walking (16 x 16).png<>uid://bqginhot4ru8n::::res://scripts/enemy.gd<>uid://ceaajocmdrdoy::::res://assets/Sprite Pack 2/4 - Robo Pumpkin/Hurt (16 x 16).png<>uid://dt6ucryo2ckd5::::res://assets/Sprite Pack 2/4 - Robo Pumpkin/Standing (16 x 16).png<>uid://blwwmynmvbsda::::res://prefabs/hitbox.tscn
 icon.svg::CompressedTexture2D::2601065659721781109::1762368218::1762368218::1::::<><><>0<>0<>32d1a5139ecd73d3e13405d04001f255<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://actors/::1762368218
-player.tscn::PackedScene::5484598208307220854::1762368218::0::1::::<><><>0<>0<><>::uid://dv87semlhdoj7::::res://scripts/player.gd<>uid://d0iwymos8x31x::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Idle (32 x 32).png<>uid://cyvroardh4yo2::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Jumping (32 x 32).png<>uid://1mkpj6n5bb0f::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Running (32 x 32).png
+::res://actors/::1762449442
+player.tscn::PackedScene::5484598208307220854::1762449442::0::1::::<><><>0<>0<><>::uid://dv87semlhdoj7::::res://scripts/player.gd<>uid://d0iwymos8x31x::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Idle (32 x 32).png<>uid://cyvroardh4yo2::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Jumping (32 x 32).png<>uid://1mkpj6n5bb0f::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Running (32 x 32).png
 ::res://assets/::1762368218
 ::res://assets/Mini FX, Items & UI/::1762368218
 LICENSE.txt::TextFile::-1::1762368218::0::1::::<><><>0<>0<><>::
@@ -137,9 +138,18 @@ Claw_Animations (16 x 16).png::CompressedTexture2D::5327782367676918943::1762368
 Hurt (32 x 32).png::CompressedTexture2D::2018041823601378381::1762368218::1762368218::1::::<><><>0<>0<>13ac0ef8f734caffd02e695634f09948<>res://.godot/imported/Hurt (32 x 32).png-ec01f85523b5315b4fa70b38f7e49a40.ctex::
 Movement_(Flip_image_back_and_forth) (32 x 32).png::CompressedTexture2D::352164322423422527::1762368218::1762368218::1::::<><><>0<>0<>19586c86b5e37bce3307b22b394bc5da<>res://.godot/imported/Movement_(Flip_image_back_and_forth) (32 x 32).png-b4adaea8b22c876144530f65f0a6c334.ctex::
 Reaching_to_Pinch (32 x 32).png::CompressedTexture2D::5204111544125049234::1762368218::1762368218::1::::<><><>0<>0<>d3714eb8460a9d3f9aa2d1153f1a22bd<>res://.godot/imported/Reaching_to_Pinch (32 x 32).png-27ce10f3cbacae68ecd8597dbf02cbfc.ctex::
-::res://levels/::1762368218
-world_1.tscn::PackedScene::1260208281421065955::1762368218::0::1::::<><><>0<>0<><>::uid://cr6010ulia40y::::res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png<>uid://dgfpgvcwyyqay::::res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png<>uid://cke1scbsjwe2q::::res://actors/player.tscn<>uid://chia1koiwrans::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png<>uid://h4r3nky7efku::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/4 - Cloud_cover_2.png<>uid://fk43kkrd0v36::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png<>uid://clty20bf50hmk::::res://shaders/movement_clouds.gdshader<>uid://bqy6kdmmb0bg1::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/2 - Hills.png<>uid://clprybvvkdr0b::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png
-::res://scripts/::1762368218
-player.gd::GDScript::8703327550561102834::1762368218::0::1::::<>CharacterBody2D<><>0<>0<><>::
-::res://shaders/::1762368218
-movement_clouds.gdshader::Shader::5585648563890337734::1762368218::0::1::::<><><>0<>0<><>::
+::res://levels/::1762449702
+world_1.tscn::PackedScene::1260208281421065955::1762449702::0::1::::<><><>0<>0<><>::uid://cr6010ulia40y::::res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png<>uid://dbkgm8anhsp4w::::res://prefabs/coin.tscn<>uid://dh6ixy4ycnt4d::::res://scripts/world_1.gd<>uid://dgfpgvcwyyqay::::res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png<>uid://cke1scbsjwe2q::::res://actors/player.tscn<>uid://chia1koiwrans::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png<>uid://h4r3nky7efku::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/4 - Cloud_cover_2.png<>uid://fk43kkrd0v36::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png<>uid://clty20bf50hmk::::res://shaders/movement_clouds.gdshader<>uid://bqy6kdmmb0bg1::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/2 - Hills.png<>uid://clprybvvkdr0b::::res://assets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png<>uid://c80w6d2ksmatp::::res://prefabs/moving_plataform.tscn<>uid://b7gyi0a78dj82::::res://enemy.tscn
+::res://prefabs/::1762448031
+coin.tscn::PackedScene::7250482137612686284::1762375073::0::1::::<><><>0<>0<><>::uid://bcwx3a2l8hiy1::::res://assets/Mini FX, Items & UI/Common Pick-ups/Coin (16 x 16).png<>uid://cbhexapncm3km::::res://scripts/coin.gd<>uid://dxnkh42mog27e::::res://assets/Mini FX, Items & UI/Effects/Yellow_Sparkle (16 x 16).png
+hitbox.tscn::PackedScene::3205272758884702534::1762448031::0::1::::<><><>0<>0<><>::uid://d1qthpc2v158i::::res://scripts/hitbox.gd
+moving_plataform.tscn::PackedScene::7142073984503329429::1762447776::0::1::::<><><>0<>0<><>::uid://cc087ags7pi2o::::res://assets/Seasonal Tilesets/5 - Misc. universal tiles/Blocks (16 x 16).png<>res://scripts/moving_plataform.gd
+::res://scripts/::1762449692
+coin.gd::GDScript::4857764820299435184::1762375073::0::1::::<>Area2D<><>0<>0<><>::
+enemy.gd::GDScript::3522337789882305271::1762448743::0::1::::<>CharacterBody2D<><>0<>0<><>::
+hitbox.gd::GDScript::9018368945348736866::1762448953::0::1::::<>Area2D<><>0<>0<><>::
+moving_plataform.gd::GDScript::3813889757340948791::1762370320::0::1::::<>Node2D<><>0<>0<><>::
+player.gd::GDScript::8703327550561102834::1762449576::0::1::::<>CharacterBody2D<><>0<>0<><>::
+world_1.gd::GDScript::7715107782576715505::1762449692::0::1::::<>Node2D<><>0<>0<><>::
+::res://shaders/::1762446694
+movement_clouds.gdshader::Shader::5585648563890337734::1762446694::0::1::::<><><>0<>0<><>::

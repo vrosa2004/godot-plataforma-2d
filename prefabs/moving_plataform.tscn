@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c80w6d2ksmatp"]
 
 [ext_resource type="Texture2D" uid="uid://cc087ags7pi2o" path="res://assets/Seasonal Tilesets/5 - Misc. universal tiles/Blocks (16 x 16).png" id="1_hdtt3"]
-[ext_resource type="Script" uid="uid://bulqhbnl861bf" path="res://moving_plataform.gd" id="1_kqqyq"]
+[ext_resource type="Script" path="res://scripts/moving_plataform.gd" id="1_kqqyq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kqqyq"]
 size = Vector2(32, 16)

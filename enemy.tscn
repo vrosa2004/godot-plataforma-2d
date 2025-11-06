@@ -1,50 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://b7gyi0a78dj82"]
+[gd_scene load_steps=13 format=3 uid="uid://b7gyi0a78dj82"]
 
 [ext_resource type="Texture2D" uid="uid://bkw6bffdjrttd" path="res://assets/Sprite Pack 2/4 - Robo Pumpkin/Walking (16 x 16).png" id="1_7k104"]
 [ext_resource type="Script" uid="uid://bqginhot4ru8n" path="res://scripts/enemy.gd" id="1_iifgy"]
 [ext_resource type="Texture2D" uid="uid://ceaajocmdrdoy" path="res://assets/Sprite Pack 2/4 - Robo Pumpkin/Hurt (16 x 16).png" id="3_epg4t"]
 [ext_resource type="Texture2D" uid="uid://dt6ucryo2ckd5" path="res://assets/Sprite Pack 2/4 - Robo Pumpkin/Standing (16 x 16).png" id="4_3yqyl"]
-
-[sub_resource type="Animation" id="Animation_wujgv"]
-resource_name = "walk"
-length = 0.2
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("texture:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("1_7k104")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("texture:hframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [2]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("texture:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.099999994),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [0, 1]
-}
+[ext_resource type="PackedScene" uid="uid://blwwmynmvbsda" path="res://prefabs/hitbox.tscn" id="5_epg4t"]
 
 [sub_resource type="Animation" id="Animation_hb8ge"]
 length = 0.001
@@ -88,7 +48,6 @@ tracks/2/keys = {
 [sub_resource type="Animation" id="Animation_e1ltt"]
 resource_name = "hurt"
 length = 0.1
-loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -167,6 +126,47 @@ tracks/2/keys = {
 "values": [0]
 }
 
+[sub_resource type="Animation" id="Animation_wujgv"]
+resource_name = "walk"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("texture:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_7k104")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("texture:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("texture:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.099999994),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pwjut"]
 _data = {
 &"RESET": SubResource("Animation_hb8ge"),
@@ -175,10 +175,14 @@ _data = {
 &"walk": SubResource("Animation_wujgv")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_4gyqm"]
-radius = 6.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_epg4t"]
+radius = 4.0
+height = 12.0
 
-[node name="enemy" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3yqyl"]
+size = Vector2(8, 2)
+
+[node name="enemy" type="CharacterBody2D" groups=["enemies"]]
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_iifgy")
@@ -196,10 +200,19 @@ autoplay = "walk"
 speed_scale = 0.5
 
 [node name="collision" type="CollisionShape2D" parent="."]
-position = Vector2(0, -7)
-shape = SubResource("CircleShape2D_4gyqm")
+position = Vector2(0, -4)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_epg4t")
 
 [node name="wall_detector" type="RayCast2D" parent="."]
 position = Vector2(0, -7)
 target_position = Vector2(-7, 0)
 collision_mask = 6
+
+[node name="hitbox" parent="." instance=ExtResource("5_epg4t")]
+
+[node name="collision2" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(0, -11)
+shape = SubResource("RectangleShape2D_3yqyl")
+
+[connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]

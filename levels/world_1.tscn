@@ -1,7 +1,8 @@
-[gd_scene load_steps=19 format=4 uid="uid://r7ppf5pbt44n"]
+[gd_scene load_steps=20 format=4 uid="uid://r7ppf5pbt44n"]
 
 [ext_resource type="Texture2D" uid="uid://cr6010ulia40y" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_3hl4r"]
 [ext_resource type="PackedScene" uid="uid://dbkgm8anhsp4w" path="res://prefabs/coin.tscn" id="1_4aspj"]
+[ext_resource type="Script" uid="uid://dh6ixy4ycnt4d" path="res://scripts/world_1.gd" id="1_thqsu"]
 [ext_resource type="Texture2D" uid="uid://dgfpgvcwyyqay" path="res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png" id="2_7ab5j"]
 [ext_resource type="PackedScene" uid="uid://cke1scbsjwe2q" path="res://actors/player.tscn" id="3_viyde"]
 [ext_resource type="Texture2D" uid="uid://chia1koiwrans" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png" id="4_bx18w"]
@@ -140,6 +141,7 @@ shader = ExtResource("6_xpxyj")
 shader_parameter/move_speed = 0.03
 
 [node name="World-1" type="Node2D"]
+script = ExtResource("1_thqsu")
 
 [node name="coins" type="Node2D" parent="."]
 
@@ -233,15 +235,27 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("8_6r8k1")
 centered = false
 
-[node name="moving_plataform" parent="." instance=ExtResource("10_8f4wj")]
+[node name="moving_plataforms" type="Node2D" parent="."]
+
+[node name="moving_plataform" parent="moving_plataforms" instance=ExtResource("10_8f4wj")]
 position = Vector2(146, 154)
 
-[node name="moving_plataform2" parent="." instance=ExtResource("10_8f4wj")]
+[node name="moving_plataform2" parent="moving_plataforms" instance=ExtResource("10_8f4wj")]
 position = Vector2(607, 156)
 move_horizontal = false
 
-[node name="enemy" parent="." instance=ExtResource("12_6r8k1")]
+[node name="camera" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 9.0
+editor_draw_limits = true
+
+[node name="enemies" type="Node2D" parent="."]
+
+[node name="enemy" parent="enemies" instance=ExtResource("12_6r8k1")]
 position = Vector2(874, 179)
 
-[node name="enemy2" parent="." instance=ExtResource("12_6r8k1")]
+[node name="enemy2" parent="enemies" instance=ExtResource("12_6r8k1")]
 position = Vector2(787, 178)

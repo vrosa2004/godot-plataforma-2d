@@ -4,6 +4,7 @@ const SPEED := 150.0
 const JUMP_FORCE := -325.0
 
 @onready var anim: AnimatedSprite2D = $anim
+@onready var remote_transform := $remote as RemoteTransform2D
 
 var is_jumping := false
 
@@ -41,3 +42,11 @@ func _play_anim(dir: float) -> void:
 		anim.play("run")
 	else:
 		anim.play("idle")
+
+func _on_hurtbox_body_entered(body: Node2D) -> void:
+	if body.is_in_group("enemies"):
+		queue_free()
+
+func follow_camera(camera):
+	var camera_path = camera.get_path()
+	remote_transform.remote_path = camera_path
