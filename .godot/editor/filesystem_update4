@@ -3,3 +3,7 @@ res://shaders/movement_clouds.gdshader
 res://levels/world_1.tscn
 res://actors/player.tscn
 res://scripts/player.gd
+res://scripts/box_pieces.gd
+res://prefabs/box_pieces.tscn
+res://prefabs/break_box.tscn
+res://scripts/break_box.gd

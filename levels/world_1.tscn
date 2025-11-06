@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://r7ppf5pbt44n"]
+[gd_scene load_steps=21 format=4 uid="uid://r7ppf5pbt44n"]
 
 [ext_resource type="Texture2D" uid="uid://cr6010ulia40y" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_3hl4r"]
 [ext_resource type="PackedScene" uid="uid://dbkgm8anhsp4w" path="res://prefabs/coin.tscn" id="1_4aspj"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://clprybvvkdr0b" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png" id="8_6r8k1"]
 [ext_resource type="PackedScene" uid="uid://c80w6d2ksmatp" path="res://prefabs/moving_plataform.tscn" id="10_8f4wj"]
 [ext_resource type="PackedScene" uid="uid://b7gyi0a78dj82" path="res://enemy.tscn" id="12_6r8k1"]
+[ext_resource type="PackedScene" uid="uid://dt1y3ixtbpc7k" path="res://prefabs/break_box.tscn" id="14_hclqf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3hl4r"]
 texture = ExtResource("2_7ab5j")
@@ -259,3 +260,21 @@ position = Vector2(874, 179)
 
 [node name="enemy2" parent="enemies" instance=ExtResource("12_6r8k1")]
 position = Vector2(787, 178)
+
+[node name="break-boxes" type="Node2D" parent="."]
+
+[node name="break-box" parent="break-boxes" instance=ExtResource("14_hclqf")]
+position = Vector2(257, 147)
+hitpoints = 2
+
+[node name="break-box2" parent="break-boxes" instance=ExtResource("14_hclqf")]
+position = Vector2(611, -23)
+hitpoints = 2
+
+[node name="break-box3" parent="break-boxes" instance=ExtResource("14_hclqf")]
+position = Vector2(497, 59)
+hitpoints = 1
+
+[node name="break-box4" parent="break-boxes" instance=ExtResource("14_hclqf")]
+position = Vector2(437, 159)
+hitpoints = 7
