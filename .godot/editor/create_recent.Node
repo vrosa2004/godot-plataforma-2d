@@ -1,9 +1,10 @@
-Node2D
 CollisionShape2D
+RigidBody2D
+Marker2D
+Node2D
 Area2D
 VisibleOnScreenNotifier2D
 Sprite2D
-RigidBody2D
 CharacterBody2D
 AnimationPlayer
 AnimationTree
@@ -11,4 +12,3 @@ RayCast2D
 RemoteTransform2D
 AnimatedSprite2D
 AnimatableBody2D
-ParallaxLayer

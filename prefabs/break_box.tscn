@@ -6,6 +6,33 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pcohs"]
 size = Vector2(16, 16)
 
+[sub_resource type="Animation" id="Animation_ddnlx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("texture:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("texture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_pcohs"]
 resource_name = "hit"
 length = 0.2
@@ -34,33 +61,6 @@ tracks/1/keys = {
 "values": [Color(1, 1, 1, 1), Color(0.54901963, 0.12156863, 0.13333334, 1), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_ddnlx"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("texture:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("texture:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rwacj"]
 _data = {
 &"RESET": SubResource("Animation_ddnlx"),
@@ -79,7 +79,6 @@ region_enabled = true
 region_rect = Rect2(16, 16, 16, 16)
 
 [node name="collision" type="CollisionShape2D" parent="."]
-visible = false
 light_mask = 64
 shape = SubResource("RectangleShape2D_pcohs")
 
@@ -87,3 +86,5 @@ shape = SubResource("RectangleShape2D_pcohs")
 libraries = {
 &"": SubResource("AnimationLibrary_rwacj")
 }
+
+[node name="spawn_coin" type="Marker2D" parent="."]

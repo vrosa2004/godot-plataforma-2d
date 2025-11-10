@@ -74,7 +74,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_53380"]
-radius = 11.0
+radius = 8.0
 
 [node name="coin" type="Area2D"]
 collision_layer = 8
@@ -82,10 +82,8 @@ script = ExtResource("1_h1t07")
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jw04l")
-animation = &"collect"
+animation = &"idle"
 autoplay = "idle"
-frame = 3
-frame_progress = 1.0
 
 [node name="collison" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_53380")
