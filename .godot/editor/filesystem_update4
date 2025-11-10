@@ -5,3 +5,6 @@ res://actors/player.tscn
 res://scripts/player.gd
 res://coin_rigid.tscn
 res://prefabs/coin.tscn
+res://prefabs/fallin_plataform.tscn
+res://scripts/fallin_plataform.gd
+res://levels/world_1.tscn

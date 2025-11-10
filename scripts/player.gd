@@ -42,6 +42,11 @@ func _physics_process(delta: float) -> void:
 	_play_anim(dir)
 
 	move_and_slide()
+	
+	for platforms in get_slide_collision_count():
+		var collision = get_slide_collision(platforms)
+		if collision.get_collider().has_method("has_collided_with"):
+			collision.get_collider().has_collided_with(collision, self)
 
 func _play_anim(dir: float) -> void:
 	if is_jumping:
